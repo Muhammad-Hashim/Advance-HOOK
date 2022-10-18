@@ -1,11 +1,16 @@
 import "./styles.css";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export default function App() {
+  const da = useRef(10);
+
+  useEffect(() => {
+    console.log("hasgimn");
+    console.log(da.current);
+  }, [da]);
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
     </div>
   );
 }
